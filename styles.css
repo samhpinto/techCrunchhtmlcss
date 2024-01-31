@@ -1,0 +1,170 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/******************************************
+  /* BASE STYLES
+  /*******************************************/
+
+body {}
+
+
+/******************************************
+  /* LAYOUT
+  /*******************************************/
+header {
+    width: 15%;
+}
+
+nav>* {
+    list-style: none;
+    text-decoration: none;
+    padding: 5% 0 0 15%;
+}
+
+nav ul+a {
+    display: none;
+}
+
+header hr {
+    display: none;
+}
+
+nav button {
+    color: yellow;
+    background-color: white;
+}
+
+nav li {
+    margin: 6px 0;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav>a,
+header+section h4 a {
+    color: rgb(255, 238, 0);
+}
+
+header+section {
+    width: 85%;
+    padding: 1%;
+}
+
+section img {
+    width: 100%;
+}
+
+header+section>* {
+    width: 65%;
+    padding: 1%;
+}
+
+header+section>section+section {
+    width: 35%;
+}
+
+header+section+section>section>* {
+    width: 33.3333%;
+}
+
+header+section+section {
+    width: 85%;
+    margin: 2% 0 0 15%;
+    padding: 2%;
+}
+
+header+section+section>* {
+    margin-bottom: 2%;
+}
+
+footer {}
+
+/******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+
+@media screen and (max-width: 840px) {
+    header+section>* {
+        width: 100%;
+        padding: 1%;
+    }
+
+    header+section>section+section {
+        width: 100%;
+    }
+
+    header+section>section+section>* {
+        width: 50%;
+        padding: 0 1% 1% 0;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    header+section+section>section>* {
+        width: 100%;
+        margin-bottom: 1%;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    header+section>section+section>* {
+        width: 100%;
+        padding: 0 1% 1% 0;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    header {
+        width: 100%;
+    }
+
+    nav ul+a {
+        display: block;
+        float: right;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav>* {
+        width: 20%;
+        padding: 1%;
+    }
+
+    header+section {
+        width: 100%;
+    }
+
+    header+section+section {
+        width: 100%;
+        margin: 0;
+    }
+
+    header hr {
+        display: block;
+    }
+}
